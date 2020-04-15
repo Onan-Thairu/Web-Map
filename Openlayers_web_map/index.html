@@ -1,28 +1,102 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Openlayers web map</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./libs/v6.2.1-dist/ol.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./libs/v6.2.1-dist/ol.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+            <h1 class="logo">Kiambu County</h1>
+            <ul class="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="grid-container">
-        <div class="grid-1">
-            <div class="sidebar">
-                <h2>Kiambu Layers</h2>
-                <input type="radio" name="baseLayerRadioButton" value="SecondarySchools">Secondary Schools<br>
-                <input type="radio" name="baseLayerRadioButton" value="ProtectedAreas" >Protectded Areas<br>
-                <input type="radio" name="baseLayerRadioButton" value="Roads" >Roads<br>
-                <input type="radio" name="baseLayerRadioButton" value="Villages" >Villages<br>
-            </div>
+      <div class="grid-1">
+        <div class="sidebar" id="checklist">
+          <hr>
+          <h2 >Layer Options</h2>
+          <hr>
+          <div class="radio">
+          <input
+            type="radio"
+            name="baseLayerRadioButton"
+            value="SecondarySchools"
+            id="SecondarySchools"/>
+            <span class="design"></span>
+          <label for="SecondarySchools">Secondary Schools</label>
+
+          <input
+            type="radio"
+            name="baseLayerRadioButton"
+            value="ProtectedAreas"
+            id="ProtectedAreas"/><span class="design"></span>
+          <label for="ProtectedAreas">Protected Areas</label>
+
+          <input
+            type="radio"
+            name="baseLayerRadioButton"
+            value="Roads"
+            id="Roads"/>
+            <span class="design"></span>
+            <label for="Roads">Roads</label>
+
+          <input
+            type="radio"
+            name="baseLayerRadioButton"
+            value="Villages"
+            id="Villages"/>
+            <span class="design"></span>
+            <label for="Villages">Villages</label>
+          
+          </div>
         </div>
-        <div class="grid-2">
-            <div id='js-map' class="map"></div>
-        </div>
+      </div>
+      <div class="grid-2">
+        <div id="map" class="map"></div>
+      </div>
     </div>
-    <script src='./main.js'></script>
-    <script src='./libs/v6.2.1-dist/ol.js'></script>
-</body>
+
+<!-- Footer -->
+<footer class="section-footer py-4 bg-primary">
+  <div class="container">
+    <div>
+      <h2 class="text-2 mb-1">Kiambu County</h2>
+      <a href="http://twitter.com">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      <a href="http://facebook.com">
+        <i class="fab fa-facebook fa-2x"></i>
+      </a>
+      <a href="http://youtube.com">
+        <i class="fab fa-youtube fa-2x"></i>
+      </a>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#">More Maps</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#">Copyright © 2020</a></li>
+        <li><a href="#">Onan Thairu</a></li>
+        
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="./main.js"></script>
+    <script src="./libs/v6.2.1-dist/ol.js"></script>
+  </body>
 </html>

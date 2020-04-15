@@ -10,7 +10,7 @@ function init(){
             projection: 'EPSG:4326',
             extent: [36.4916229248047, -1.31446027755737, 37.3634796142578, -0.759291648864746],
         }),
-        target: 'js-map'
+        target: 'map',
     })
 
     //Basemaps layers
@@ -82,7 +82,7 @@ function init(){
     map.addLayer(baseLayerGroup);
 
     // Layer Switcher Logic for Basemaps
-    const baseLayerElements = document.querySelectorAll('.sidebar > input[type=radio]');
+    const baseLayerElements = document.querySelectorAll('.radio > input[type=radio]');
     for (let baseLayerElement of baseLayerElements){
         baseLayerElement.addEventListener('change', function(){
             let baseLayerElementValue = this.value;
@@ -93,12 +93,7 @@ function init(){
         })
     }
 
-    // Vector Feature popup logic
-    //map.on('click', function(e){
-    //    map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
-    //        console.log(feature.getKeys());
-    //    })
-    //})
+    
 
 
 }
